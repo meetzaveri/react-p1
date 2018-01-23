@@ -6,7 +6,7 @@ import Pie from '../../components/pie';
 
 const distributedLayerDoughnut = () => (
     <div style={{position : 'relative'}}> 
-        <Slice  slicedegree="36" >
+        <Slice  slicedegree="0" >
             <Pie piebg="#D1A917" degree="252" />
         </Slice>
         <Slice clipnative slicedegree="72">

@@ -6,17 +6,6 @@ import Slice from '../../components/slice';
 import Pie from '../../components/pie';
 import DistributedLayerDoughnut from './distributedLayerDoughnut';
 
-const Button = styled.button`
-  /* Adapt the colours based on primary prop */
-  background: ${props => props.primary ? 'palevioletred' : 'white'};
-  color: ${props => props.primary ? 'white' : 'palevioletred'};
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-`;
-
 class Circle extends Component{
     constructor(props){
         super(props);
@@ -31,23 +20,21 @@ class Circle extends Component{
         const { p1,p2,p3,p4,p5 } = this.state.pie;
         return(
             <div>
-                <Button > Not primary </Button> 
-                <Button primary> Primary </Button>
                 { 
-                  this.state.leaveEqual === true ? (<DistributedLayerDoughnut />) :(
+                  this.state.leaveEqual === false ? (<DistributedLayerDoughnut />) :(
                 <div className ="wrapper" style={{position : 'relative'}}>
                     <Slice piebg="yellow">
-                        <Slice  slicedegree={ 36 - p1 } >
-                            <Pie piebg="#D1A917" degree={ 36 + p1}  />
+                        <Slice  slicedegree={ 0 - p1 } >
+                            <Pie piebg="#D1A917" degree={ 252 + p1}  />
                         </Slice> 
-                        <Slice clipnative slicedegree={ 72 - p2}  z_axis={p2} >
-                            <Pie clipnative piebg="#2C9DC2" degree={ 252 + p2}  />
+                        <Slice clipnative slicedegree={ 72 - p2 }  z_axis={p2} >
+                            <Pie clipnative piebg="#2C9DC2" degree={ 252 + p2 }  />
                         </Slice> 
                         <Slice clipnative slicedegree={ 144 - p3  }  z_axis={p3} >
-                            <Pie clipnative piebg="#D12A6A" degree={ 252 + p3}  />
+                            <Pie clipnative piebg="#D12A6A" degree={ 252 + p3 }  />
                         </Slice> 
                         <Slice clipnative slicedegree={ 216 - p4 }  z_axis={p4} >
-                            <Pie clipnative piebg="#535353" degree={ 252 + p4}  />
+                            <Pie clipnative piebg="#535353" degree={ 252 + p4 }  />
                         </Slice> 
                         <Slice clipnative slicedegree={ 288 - p5 }  z_axis={p5} >
                             <Pie clipnative piebg="#AC6946" degree={ 252 + p5}  />

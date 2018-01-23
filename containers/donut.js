@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FiveLayerCircle from './five-layer-donut';
+import FourLayerCircle from './four-layer-donut';
 
 class Donut extends Component{
     constructor(props){
@@ -9,6 +10,7 @@ class Donut extends Component{
         return(
             <div>
                 <FiveLayerCircle />
+                <FourLayerCircle  />
             </div>
         );
     }

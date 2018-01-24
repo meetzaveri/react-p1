@@ -12,6 +12,7 @@ const Pie = styled.div`
     width: 300px;
     border-radius: 50%;
     clip : ${props => props.clipnative ? 'rect(0px, 300px, 300px, 150px)' : 'auto'};
+    border: ${props => props.mainbg === 'white' ? props.widthoffset + 'px solid white' : props.widthoffset + 'px solid ' + props.mainbg };
 `
 
 export default Pie;

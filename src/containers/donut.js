@@ -12,11 +12,11 @@ class Donut extends Component{
     render() {
         return(
             <div>
-                {/* <FiveLayerCircle />
-                <FourLayerCircle  />
-                <ThreeLayerCircle />
-                <TwoLayerCircle /> */}
-                <ProgressBar />
+                <FiveLayerCircle toggleEquality={false} chartSize="large"/>
+                <FourLayerCircle toggleEquality={false} chartSize="large"/>
+                <ThreeLayerCircle toggleEquality={false} chartSize="large"/>
+                <TwoLayerCircle toggleEquality={false} chartSize="large"/>
+                <ProgressBar chartSize="large"/>
             </div>
         );
     }

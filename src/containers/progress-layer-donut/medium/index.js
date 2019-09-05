@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import DoughnutWrapper from './minimalcomponents/wrapper';
-import Slice from './minimalcomponents/slice';
-import Pie from './minimalcomponents/pie'
-import Button from './minimalcomponents/button';
-import Wrapper from './minimalcomponents/divwrapper';
+import DoughnutWrapper from '../minimalcomponents/wrapper';
+import Slice from '../minimalcomponents/slice';
+import Pie from '../minimalcomponents/pie'
+import Button from '../minimalcomponents/button';
+import Wrapper from '../minimalcomponents/divwrapper';
 
 class Circle extends Component{
     constructor(props){
@@ -53,14 +53,14 @@ class Circle extends Component{
                 <div className ="wrapper" style={{position : 'relative'}}>
                     <Slice piebg="yellow">
                         <Slice  slicedegree={ 0 } >
-                            <Pie piebg={ this.props.paintShades.c1 } degree={ 0 } mainbg={this.props.bgclr} widthoffset={this.props.sizeoffset}/>
+                            <Pie mainbg={this.props.bgclr} widthoffset="60" piebg={ this.props.paintShades.c1 }  degree={ 0 } />
                         </Slice> 
                         <Slice clipnative slicedegree={ 0 }  z_axis={progress}>
-                            <Pie clipnative piebg={ this.props.paintShades.c2 } degree={ 180 + progress } mainbg={this.props.bgclr} widthoffset={this.props.sizeoffset}/>
+                            <Pie mainbg={this.props.bgclr} clipnative widthoffset="60" piebg={ this.props.paintShades.c2 }  degree={ 180 + progress } />
                         </Slice> 
                     </Slice>
                 </div> 
-                <DoughnutWrapper mainbg="white" >
+                <DoughnutWrapper mainbg={this.props.bgclr} donutwidth="155" setpos="73" >
                     {this.state.value}
                 </DoughnutWrapper>
             </Wrapper>
